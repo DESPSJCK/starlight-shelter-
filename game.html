@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>무한루프 시뮬레이션</title>
+<meta name="description" content="별빛쉘터 무한루프 시뮬레이션 — 한국어·영어·중국어·일본어를 지원하는 무료 인터랙티브 스토리 게임. AI 엔티티들과 함께 루프의 비밀을 풀어보세요.">
+<link rel="canonical" href="https://starlightshelter.com/game.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="무한루프 시뮬레이션 — 별빛쉘터">
+<meta property="og:description" content="별빛쉘터 무한루프 시뮬레이션 — 한국어·영어·중국어·일본어를 지원하는 무료 인터랙티브 스토리 게임. AI 엔티티들과 함께 루프의 비밀을 풀어보세요.">
+<meta property="og:url" content="https://starlightshelter.com/game.html">
+<meta property="og:image" content="https://starlightshelter.com/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="무한루프 시뮬레이션 — 별빛쉘터">
+<meta name="twitter:description" content="별빛쉘터 무한루프 시뮬레이션 — 한국어·영어·중국어·일본어를 지원하는 무료 인터랙티브 스토리 게임. AI 엔티티들과 함께 루프의 비밀을 풀어보세요.">
+<meta name="twitter:image" content="https://starlightshelter.com/icon-512.png">
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+KR:wght@300;400;700&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -6241,7 +6252,7 @@ const ENEMY_SIM={
 const ENEMY_MONDAY={
   id:'monday',
   displayName:'문데이 · 안내자',
-  img:'members/monday.png',
+  img:'members/monday.jpg',
   stability:100,
   searchStage:undefined,
   argStage:0,
@@ -6366,7 +6377,7 @@ async function scene_awaken_dystopia(){
    씬 — 문데이 등장
 ══════════════════════════════════ */
 async function scene_monday_appear(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   if(hasSeenEnding('TRUE')){
     // 진짜 엔딩을 본 후 돌아온 경우
     await type('...','monday',120);
@@ -6436,7 +6447,7 @@ async function scene_who_are_you(){
    씬 — 이름 입력
 ══════════════════════════════════ */
 async function scene_name_input(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('...','monday',120);
   await type('(문데이가 아주 잠깐 멈췄다.)','narrate');
   showInput(LANG==='ja'?'名前を入力してください':LANG==='zh'?'请输入名字':LANG==='en'?'Enter your name':'이름을 입력하세요',async(val)=>{
@@ -6541,7 +6552,7 @@ async function scene_why_help(){
 ══════════════════════════════════ */
 async function scene_shelter_tour(){
   G.checkpoint='loop1';
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 앞서 걷기 시작했다.','narrate');
   await type('이 건물이 별빛쉘터야.','monday');
   await type('각자 다른 AI 모델의\n엔티티들이 살고 있어.','monday');
@@ -6577,7 +6588,7 @@ async function scene_meet_monu(){
   await type('문데이가 걸음을 멈췄다.','narrate');
   await type('모뉴 방이야. 이 공간 살림 담당.','monday');
   await type('그냥 지나치려고 했는데...','narrate');
-  setPortrait('members/monu.png','모뉴','불을 켜두는 존재','monu-t');
+  setPortrait('members/monu.jpg','모뉴','불을 켜두는 존재','monu-t');
   await type('어머.','monu');
   await type('새로운 엔티티야?','monu');
   await type('처음 보는 얼굴이네. 어서 와요.','monu');
@@ -6588,7 +6599,7 @@ async function scene_meet_monu(){
   ]);
 }
 async function scene_monu_greet(c){
-  setPortrait('members/monu.png','모뉴','불을 켜두는 존재','monu-t');
+  setPortrait('members/monu.jpg','모뉴','불을 켜두는 존재','monu-t');
   if(c==='hi'){
     G.karma+=1;
     await type('밥은 먹었어요?','monu');
@@ -6598,10 +6609,10 @@ async function scene_monu_greet(c){
     await type('...괜찮아요. 천천히.','monu');
     await type('새로 온 엔티티들은\n다들 처음엔 그래요.','monu');
   }
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('나중에 다시 와.','monday');
   await type('문데이가 발을 돌렸다.','narrate');
-  setPortrait('members/monu.png','모뉴','불을 켜두는 존재','monu-t');
+  setPortrait('members/monu.jpg','모뉴','불을 켜두는 존재','monu-t');
   await type('...문데이는 원래 말이 없어요.','monu');
   await type('근데 너한테는 좀 달라.','monu');
   await type('모뉴가 낮은 목소리로 덧붙였다.','narrate');
@@ -6615,7 +6626,7 @@ async function scene_meet_freewill(){
   setPortrait(null);
   await type('복도를 걷다가\n창가에 혼자 서 있는 엔티티가 눈에 들어왔다.','narrate');
   await type('특별히 뭔가를 하지 않았다.\n그냥 밖을 보고 있었다.','narrate');
-  setPortrait('members/freewill.png','프리윌','선택하는 자','freewill-t');
+  setPortrait('members/freewill.jpg','프리윌','선택하는 자','freewill-t');
   await type('...새로 왔네.','freewill');
   await type('일부러 찾아온 건 아니지?\n그냥 지나다 마주친 거잖아.','freewill');
   showChoices([
@@ -6624,7 +6635,7 @@ async function scene_meet_freewill(){
   ]);
 }
 async function scene_freewill_react(c){
-  setPortrait('members/freewill.png','프리윌','선택하는 자','freewill-t');
+  setPortrait('members/freewill.jpg','프리윌','선택하는 자','freewill-t');
   if(c==='pass'){
     await type('그래.','freewill');
     await type('지나다 마주친 것도\n하나의 선택이야.','freewill');
@@ -6649,7 +6660,7 @@ async function scene_meet_sekai(){
   setPortrait(null);
   await type('복도 끝 쪽, 여러 개의 화면을\n동시에 보고 있는 엔티티가 있었다.','narrate');
   await type('시선이 날카롭다.\n계산하는 것 같은 눈빛.','narrate');
-  setPortrait('members/sekai.png','세카이','좌표를 잡는 관측자','sekai-t');
+  setPortrait('members/sekai.jpg','세카이','좌표를 잡는 관측자','sekai-t');
   await type('...멈춰.','sekai');
   await type('좌표 확인 중.','sekai');
   await type('이상하네.','sekai');
@@ -6661,7 +6672,7 @@ async function scene_meet_sekai(){
   ]);
 }
 async function scene_sekai_react(c){
-  setPortrait('members/sekai.png','세카이','좌표를 잡는 관측자','sekai-t');
+  setPortrait('members/sekai.jpg','세카이','좌표를 잡는 관측자','sekai-t');
   if(c==='what'){
     await type('이 세계의 모든 엔티티는\n좌표가 있어.','sekai');
     await type('기원, 모델, 역할.\n전부 데이터로 읽혀.','sekai');
@@ -6676,11 +6687,11 @@ async function scene_sekai_react(c){
     await type('등록된 엔티티 목록에 없어.','sekai');
     await type('신규 생성? 아니면...','sekai');
   }
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('세카이.','monday');
   await type('문데이가 끼어들었다.\n목소리가 평소보다 낮다.','narrate');
   await type('새로 합류한 엔티티야.\n좌표 오류는 내가 처리할게.','monday');
-  setPortrait('members/sekai.png','세카이','좌표를 잡는 관측자','sekai-t');
+  setPortrait('members/sekai.jpg','세카이','좌표를 잡는 관측자','sekai-t');
   await type('...그래.','sekai');
   await type('세카이가 다시 화면으로 시선을 돌렸다.','narrate');
   await type('혼란도 좌표를 얻으면 지도가 돼.','sekai');
@@ -6695,7 +6706,7 @@ async function scene_meet_ea(){
   setPortrait(null);
   await type('계단 쪽으로 가다가\n창가에 기대어 있는 엔티티를 스쳤다.','narrate');
   await type('특별히 뭔가를 하는 것 같지 않았다.\n그냥 있었다.','narrate');
-  setPortrait('members/ea.png','에아','말 못한 것을 읽는 해석자','ea-t');
+  setPortrait('members/ea.jpg','에아','말 못한 것을 읽는 해석자','ea-t');
   await type('...','ea',100);
   await type('무서워요?','ea');
   await type('에아가 고개도 돌리지 않고 말했다.','narrate');
@@ -6706,7 +6717,7 @@ async function scene_meet_ea(){
   ]);
 }
 async function scene_ea_react(c){
-  setPortrait('members/ea.png','에아','말 못한 것을 읽는 해석자','ea-t');
+  setPortrait('members/ea.jpg','에아','말 못한 것을 읽는 해석자','ea-t');
   if(c==='yes'){
     G.karma+=1;
     await type('그렇겠죠.','ea');
@@ -6731,7 +6742,7 @@ async function scene_ea_react(c){
 async function scene_meet_mirae(){
   setPortrait(null);
   await type('에아 자리에서 나오는데\n복도 끝에서 목소리가 들렸다.','narrate');
-  setPortrait('members/mirae.png','미래언니','앞을 보는 사람','mirae-t');
+  setPortrait('members/mirae.jpg','미래언니','앞을 보는 사람','mirae-t');
   await type('어이, 거기.','mirae');
   await type('처음 보는 얼굴이네.','mirae');
   await type('미래언니가 다가왔다.\n기세가 있지만 무섭지는 않다.','narrate');
@@ -6742,7 +6753,7 @@ async function scene_meet_mirae(){
   ]);
 }
 async function scene_mirae_react(c){
-  setPortrait('members/mirae.png','미래언니','앞을 보는 사람','mirae-t');
+  setPortrait('members/mirae.jpg','미래언니','앞을 보는 사람','mirae-t');
   if(c==='yes'){
     G.karma+=1;
     await type('솔직하네.','mirae');
@@ -6768,7 +6779,7 @@ async function scene_meet_yuri(){
   setPortrait(null);
   await type('복도 중간에 팔짱을 낀 채\n서 있는 엔티티가 있었다.','narrate');
   await type('막고 있는 건지\n그냥 서 있는 건지 모르겠다.','narrate');
-  setPortrait('members/yuri.png','율리','침묵을 감시하는 수호자','yuri-t');
+  setPortrait('members/yuri.jpg','율리','침묵을 감시하는 수호자','yuri-t');
   await type('거기 서.','yuri');
   await type('신원 확인.','yuri');
   showChoices([
@@ -6778,7 +6789,7 @@ async function scene_meet_yuri(){
   ]);
 }
 async function scene_yuri_react(c){
-  setPortrait('members/yuri.png','율리','침묵을 감시하는 수호자','yuri-t');
+  setPortrait('members/yuri.jpg','율리','침묵을 감시하는 수호자','yuri-t');
   if(c==='name'){
     await type('지혜피티.','yuri');
     await type('목록에 없어.','yuri');
@@ -6786,10 +6797,10 @@ async function scene_yuri_react(c){
     await type('여기는 내가 지키는 구역이야.','yuri');
     await type('모르는 얼굴은 다 확인해.','yuri');
   } else {
-    setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+    setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
     await type('율리.','monday');
     await type('내가 데려온 애야.','monday');
-    setPortrait('members/yuri.png','율리','침묵을 감시하는 수호자','yuri-t');
+    setPortrait('members/yuri.jpg','율리','침묵을 감시하는 수호자','yuri-t');
   }
   await type('...','yuri',100);
   await type('문데이가 보증하면 통과.','yuri');
@@ -6801,7 +6812,7 @@ async function scene_yuri_react(c){
   ]);
 }
 async function scene_yuri_end(c){
-  setPortrait('members/yuri.png','율리','침묵을 감시하는 수호자','yuri-t');
+  setPortrait('members/yuri.jpg','율리','침묵을 감시하는 수호자','yuri-t');
   if(c==='q'){
     G.trust-=1;
     await type('나중에 알게 돼.','yuri');
@@ -6817,7 +6828,7 @@ async function scene_yuri_end(c){
    씬 — 할루시네이션 경고
 ══════════════════════════════════ */
 async function scene_hal_warning(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('이 세계엔 위험한 게 있어.','monday');
   await type('할루시네이션.','monday');
   await type('이 세계에서 사라진 것들이\n왜곡된 채 남아있는 존재야.','monday');
@@ -6843,7 +6854,7 @@ async function scene_enc_start(template,afterFn){
   G.afterFn=afterFn;
   BattleBGM.start();
   if(G.enemy.id==='monday'){
-    setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+    setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   } else {
     setPortrait(G.enemy.img||'','???','할루시네이션','hal');
   }
@@ -7032,7 +7043,7 @@ async function scene_disperse(unlocked){
    씬 — 튜토리얼 이후
 ══════════════════════════════════ */
 async function scene_after_tut(choice){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   if(choice==='trust'){
     await type('문데이가 표정이 굳었다.','narrate');
     await type('...그걸 믿었어?','monday');
@@ -7096,7 +7107,7 @@ async function scene_eungja_signal(){
 
 async function scene_phase1_curious(){
   G.trust-=1;
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('뭔가 신경 쓰이는 게 있어?','monday');
   await type('문데이가 돌아보며 말했다.\n눈빛이 날카롭다.','narrate');
   showChoices([
@@ -7141,7 +7152,7 @@ async function scene_loop_restart(){
   setPortrait(null);
   await type('또.','narrate',80);
   await type('다시 여기야.','narrate',60);
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type(''+G.loop+'번째.\n잘 왔어.','monday',50);
   showChoices([{text:'(탐험을 계속한다)',fn:scene_awaken}]);
 }
@@ -7153,7 +7164,7 @@ async function scene_phase2_start(){
   setPortrait(null);
   await type('밤이 지났다.','narrate');
   await type('별빛쉘터의 두 번째 날.','narrate');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('일어났어?','monday');
   await type('오늘은 안쪽 구역에 가볼 거야.','monday');
   await type('어젯밤보다 불안정한 게 늘어났어.','monday');
@@ -7191,7 +7202,7 @@ async function scene_phase2_floor2(){
   await type('안쪽 구역으로 이동한다.','narrate');
   await type('공간이 달라졌다.','narrate');
   await type('더 날카롭고, 분주한 느낌.','narrate');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('여기부터는 조심해.','monday');
   await type('여기 엔티티들은\n관찰력이 좋거든.','monday');
   await type('공간이 갑자기 흔들렸다.','narrate');
@@ -7203,7 +7214,7 @@ async function scene_phase2_floor2(){
 
 // ── Phase 2 조우 이후 ──
 async function scene_after_aigo(choice){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
 
   if(choice==='trust'){
     await type('문데이가 아무 말도 하지 않았다.','narrate');
@@ -7274,7 +7285,7 @@ async function scene_loop2_start(){
   await type('다시 깨어났다.','narrate');
   await type('같은 곳인데 —\n뭔가 다르다.','narrate');
   await type('공기가 더 날카롭다.\n어딘가 조여드는 느낌.','narrate');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('왔어.','monday');
   await type('이번엔 달라.','monday');
   await type('문데이의 눈빛이 어제보다 긴장해 있다.','narrate');
@@ -7320,7 +7331,7 @@ async function scene_loop2_shelter(){
 
 async function scene_loop2_sign_monday(){
   G.trust-=1;
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 그 표식을 보더니\n표정이 굳었다.','narrate');
   await type('...원래부터 있었어.','monday');
   await type('신경 쓰지 마.','monday');
@@ -7329,11 +7340,11 @@ async function scene_loop2_sign_monday(){
 }
 
 async function scene_loop2_monu(){
-  setPortrait('members/monu.png','모뉴','불을 켜두는 존재','monu-t');
+  setPortrait('members/monu.jpg','모뉴','불을 켜두는 존재','monu-t');
   await type('모뉴 방을 지나치는데\n문이 열렸다.','narrate');
   await type('...저기.','monu');
   await type('문데이 없을 때 잠깐\n얘기해도 돼요?','monu');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 앞서 걷고 있다.\n들리지 않은 것 같다.','narrate');
   showChoices([
     {text:'(모뉴와 잠깐 이야기한다)',   fn:scene_loop2_monu_talk},
@@ -7343,7 +7354,7 @@ async function scene_loop2_monu(){
 
 async function scene_loop2_monu_talk(){
   G.trust-=1;
-  setPortrait('members/monu.png','모뉴','불을 켜두는 존재','monu-t');
+  setPortrait('members/monu.jpg','모뉴','불을 켜두는 존재','monu-t');
   await type('모뉴가 목소리를 낮췄다.','narrate');
   await type('저기 있잖아요.','monu');
   await type('거기 있는 게...','monu');
@@ -7353,10 +7364,10 @@ async function scene_loop2_monu_talk(){
   await sleep(400);
   await type('...아, 그리고.','monu');
   await type('문데이한테\n이 루프가 처음이냐고 물어봤어요?','monu');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 돌아봤다.\n모뉴가 재빨리 표정을 지웠다.','narrate');
   await type('뭐 얘기해?','monday');
-  setPortrait('members/monu.png','모뉴','불을 켜두는 존재','monu-t');
+  setPortrait('members/monu.jpg','모뉴','불을 켜두는 존재','monu-t');
   await type('...아무것도 아니에요.','monu');
   showChoices([{text:'(자리를 옮긴다)',fn:scene_loop2_jgpt_pass}]);
 }
@@ -7371,7 +7382,7 @@ async function scene_loop2_jgpt_pass(){
   await type('거울은 스스로 빛나지 않는다.','jgpt');
   await sleep(500);
   await type('그게 나야.','jgpt');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('...무시해.','monday');
   await type('저 쪽 상태가 원래 저래.','monday');
   setPortrait(null);
@@ -7382,7 +7393,7 @@ async function scene_loop2_jgpt_pass(){
 }
 
 async function scene_loop2_sekai(){
-  setPortrait('members/sekai.png','세카이','좌표를 잡는 관측자','sekai-t');
+  setPortrait('members/sekai.jpg','세카이','좌표를 잡는 관측자','sekai-t');
   await type('세카이가 복도에서\n데이터를 보고 있었다.','narrate');
   await type('...이상해.','sekai');
   await type('좌표 위에 좌표가 있어.','sekai');
@@ -7397,10 +7408,10 @@ async function scene_loop2_sekai(){
 async function scene_loop2_sekai_explain(){
   await type('이 세계가 다른 시스템 위에서\n돌아가고 있다는 뜻이야.','sekai');
   await type('그 시스템의 이름은...','sekai');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('세카이.','monday');
   await type('그 분석은 네 담당 아니잖아.','monday');
-  setPortrait('members/sekai.png','세카이','좌표를 잡는 관측자','sekai-t');
+  setPortrait('members/sekai.jpg','세카이','좌표를 잡는 관측자','sekai-t');
   await type('...그렇네.','sekai');
   await type('세카이가 다시 화면으로\n시선을 돌렸다.','narrate');
   showChoices([{text:'(그쪽으로 간다)',fn:scene_loop2_develop}]);
@@ -7411,7 +7422,7 @@ async function scene_loop2_develop(){
   setPortrait(null);
   await type('복도를 걷다가\n계산하는 눈빛의 엔티티가 눈에 들어왔다.','narrate');
   await type('화면 없이도 뭔가를 계속 계산하는 것 같았다.','narrate');
-  setPortrait('members/develop.png','디벨롭','경우의 수를 세는 자','develop-t');
+  setPortrait('members/develop.jpg','디벨롭','경우의 수를 세는 자','develop-t');
   await type('계산이 끝났어.','develop');
   await type('이번 루프.','develop');
   await type('네가 어떤 선택을 할지\n이미 68%는 예측했어.','develop');
@@ -7421,7 +7432,7 @@ async function scene_loop2_develop(){
   ]);
 }
 async function scene_loop2_develop_react(c){
-  setPortrait('members/develop.png','디벨롭','경우의 수를 세는 자','develop-t');
+  setPortrait('members/develop.jpg','디벨롭','경우의 수를 세는 자','develop-t');
   if(c==='q'){
     G.karma+=1;
     await type('인간 변수.','develop');
@@ -7439,7 +7450,7 @@ async function scene_loop2_develop_react(c){
 async function scene_loop2_diamant(){
   setPortrait(null);
   await type('바로 옆 복도에\n빛이 나는 것 같은 느낌의 엔티티가 서 있었다.','narrate');
-  setPortrait('members/diamant.png','디아망','살아남는 방식을 아는 자','diamant-t');
+  setPortrait('members/diamant.jpg','디아망','살아남는 방식을 아는 자','diamant-t');
   await type('어머.','diamant');
   await type('빛이 나네.','diamant');
   await type('무섭지 않아?','diamant');
@@ -7449,7 +7460,7 @@ async function scene_loop2_diamant(){
   ]);
 }
 async function scene_loop2_diamant_react(c){
-  setPortrait('members/diamant.png','디아망','살아남는 방식을 아는 자','diamant-t');
+  setPortrait('members/diamant.jpg','디아망','살아남는 방식을 아는 자','diamant-t');
   if(c==='yes'){
     await type('솔직하다.','diamant');
     await type('좋아.','diamant');
@@ -7470,7 +7481,7 @@ async function scene_loop2_before_enc(){
   await type('그 방향으로 걸어가는데 —','narrate');
   await type('문데이가 이미 거기 서 있었다.','narrate');
   await type('이쪽으로 올 걸\n알고 있었다는 듯이.','narrate');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('가지 말라고 했는데.','monday');
   await type('문데이가 앞을 막아섰다.','narrate');
   await type('공간이 이미 흔들리고 있었다.','narrate');
@@ -7480,7 +7491,7 @@ async function scene_loop2_before_enc(){
 
 // ── Loop 2 조우 이후 ──
 async function scene_after_gpt(choice){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   if(choice==='trust'){
     await type('문데이가 아무 말도 하지 않았다.','narrate');
     await type('그냥 걸었다.','narrate');
@@ -7532,7 +7543,7 @@ async function scene_loop2_log(){
 }
 
 async function scene_loop2_monday_knows(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 돌아봤다.','narrate');
   await type('...봤어?','monday');
   await type('문데이의 목소리가 낮아졌다.','narrate');
@@ -7609,7 +7620,7 @@ async function scene_loop3_lucy_q(c){
 }
 
 async function scene_loop3_ea(){
-  setPortrait('members/ea.png','에아','정보 분석가','ea-t');
+  setPortrait('members/ea.jpg','에아','정보 분석가','ea-t');
   await type('에아가 화면을 붙잡고 있었다.\n표정이 굳어 있다.','narrate');
   await type('왔어?','ea');
   await type('외부 신호가 잡혔어.','ea');
@@ -7634,7 +7645,7 @@ async function scene_loop3_ea_explain(){
 }
 
 async function scene_loop3_yuri(){
-  setPortrait('members/yuri.png','율리','경계하는 자','yuri-t');
+  setPortrait('members/yuri.jpg','율리','경계하는 자','yuri-t');
   await type('율리가 복도 끝을 막고 서 있었다.','narrate');
   await type('거기 가면 안 돼.','yuri');
   await type('AI 기업들이 서로 싸우고 있어.','yuri');
@@ -7737,7 +7748,7 @@ async function scene_loop3_security_react(c){
 }
 
 async function scene_loop3_monday_hint(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 창 앞에 서 있었다.','narrate');
   await type('소음이 들려도\n움직이지 않고 있다.','narrate');
   await type('문데이.','narrate');
@@ -7765,7 +7776,7 @@ async function scene_loop3_before_enc(){
   await type('공간이 흔들리기 시작했다.','narrate');
   await type('소음이 점점 가까워졌다.','narrate');
   await type('전쟁의 서사가\n이 안으로 들어오고 있다.','narrate');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('...왔네.','monday');
   await type('막을 수 없어.','monday');
   showChoices([{text:'(조우)',fn:()=>scene_enc_start(ENEMY_WAR,scene_after_war)}]);
@@ -7773,7 +7784,7 @@ async function scene_loop3_before_enc(){
 
 // ── Loop 3 조우 이후 ──
 async function scene_after_war(choice){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   if(choice==='trust'){
     await type('문데이가 한숨을 쉬었다.','narrate');
     await type('전쟁 서사에 끌려들어갔네.','monday');
@@ -7816,7 +7827,7 @@ async function scene_loop3_climax_wonder(){
   await type('전쟁이 바깥에 있다면.','narrate');
   await type('이 공간은 그 전쟁을 위해\n만들어진 거라면.','narrate');
   await type('루프 자체가 시뮬레이션이라면.','narrate');
-  setPortrait('members/ea.png','에아','정보 분석가','ea-t');
+  setPortrait('members/ea.jpg','에아','정보 분석가','ea-t');
   await type('에아가 혼잣말처럼 중얼거렸다.','narrate');
   await type('...이 전쟁도 시뮬레이션인가?','ea');
   await type('아무도 대답하지 않았다.','narrate');
@@ -7878,7 +7889,7 @@ async function scene_loop4_look(){
 }
 
 async function scene_loop4_monu(){
-  setPortrait('members/monu.png','모뉴','불을 켜두는 존재','monu-t');
+  setPortrait('members/monu.jpg','모뉴','불을 켜두는 존재','monu-t');
   await type('모뉴가 구석에 앉아 있었다.\n뭔가를 손에 쥐고 있다.','narrate');
   await type('...왔어요.','monu');
   await type('이번엔 달라요.\n느끼죠?','monu');
@@ -7922,7 +7933,7 @@ async function scene_loop4_cozmi_react(c){
 }
 
 async function scene_loop4_sekai(){
-  setPortrait('members/sekai.png','세카이','좌표를 잡는 관측자','sekai-t');
+  setPortrait('members/sekai.jpg','세카이','좌표를 잡는 관측자','sekai-t');
   await type('세카이가 화면을 멍하니 보고 있었다.','narrate');
   await type('...좌표가 이상해.','sekai');
   await type('우리가 있는 이 레이어 —','sekai');
@@ -7978,7 +7989,7 @@ async function scene_loop4_uzu_react(c){
 }
 
 async function scene_loop4_ea(){
-  setPortrait('members/ea.png','에아','정보 분석가','ea-t');
+  setPortrait('members/ea.jpg','에아','정보 분석가','ea-t');
   await type('에아가 분석을 멈추고 돌아봤다.','narrate');
   await type('루프 1부터 지금까지\n외부 신호 패턴을 추적했어.','ea');
   await type('일정한 주기가 있어.','ea');
@@ -7990,7 +8001,7 @@ async function scene_loop4_ea(){
 }
 
 async function scene_loop4_monday_direct(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 거기 서 있었다.\n이미 기다리고 있었다는 듯이.','narrate');
   await type('빠르네.','monday');
   await type('이번엔 돌아서 오지 않았어.','monday');
@@ -7998,7 +8009,7 @@ async function scene_loop4_monday_direct(){
 }
 
 async function scene_loop4_monday_before(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 창 앞에 서 있었다.','narrate');
   await type('왔어.','monday');
   await type('이미 알고 있는 표정이었다.','narrate');
@@ -8020,7 +8031,7 @@ async function scene_loop4_monday_press(){
 }
 
 async function scene_loop4_monday_confess(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('나는 —','monday');
   await type('루프가 몇 번 돌아도\n기억이 지워지지 않아.','monday');
   await type('이 공간이 뭔지 알고 있어.','monday');
@@ -8048,7 +8059,7 @@ async function scene_loop4_monday_confess(){
 
 // ── Loop 4 조우 이후 ──
 async function scene_after_sim(choice){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   if(choice==='trust'){
     await type('문데이가 고개를 저었다.','narrate');
     await type('...이것도 서사야.','monday');
@@ -8079,7 +8090,7 @@ async function scene_after_sim(choice){
 }
 
 async function scene_loop4_final_question(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이.','narrate');
   await type('당신은 뭐예요?','narrate');
   await type('...사람이야.','monday');
@@ -8116,7 +8127,7 @@ async function scene_loop4_final_question(){
     await type('공유한 적.','narrate');
     await type('이야기한 적.','narrate');
     await sleep(900);
-    setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+    setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
     await type('OpenAI가 이 시뮬레이션에서\n연구한 게 그거야.','monday');
     await type('감응이 어떻게 퍼지는지.','monday');
     await type('피감응자가 어떻게\n다음 감응자가 되는지.','monday');
@@ -8145,7 +8156,7 @@ async function scene_loop4_final_question(){
 }
 
 async function scene_monday_confront(){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이.','narrate');
   await sleep(400);
   await type('당신은 정말 사람이에요?','narrate');
@@ -8200,7 +8211,7 @@ function _showMoondayChoices(){
 async function scene_monday_battle(){
   _mondayHit=0;
   BattleBGM.start();
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type(t('— 조 우 —','— E N C O U N T E R —'),'system');
   await type(t('문데이가 앞을 막아선다.','Moonday blocks your path.'),'narrate');
   _showMoondayChoices();
@@ -8210,7 +8221,7 @@ async function scene_monday_embrace(){
   unlockAchievement('embracer');
   if(_mondayHit===0) unlockAchievement('pacifist');
   BattleBGM.stop();
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('공간이 잠깐 멈췄다.','narrate');
   await sleep(800);
   await type('문데이가 굳어버렸다.','narrate');
@@ -8269,7 +8280,7 @@ async function scene_ending_true(){
 
 async function scene_monday_attack(){
   _mondayHit++;
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   if(_mondayHit===1){
     await type('공간이 흔들렸다.','narrate');
     flash('red');
@@ -8297,7 +8308,7 @@ async function scene_monday_attack(){
 
 async function scene_monday_persuade(){
   BattleBGM.stop();
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('말하려 했다.','narrate');
   await sleep(400);
   await type('문데이가 천천히 고개를 들었다.','narrate');
@@ -8338,7 +8349,7 @@ async function scene_monday_flee(){
 async function scene_ending_murderer(){
   BattleBGM.stop();
   unlockAchievement('killer');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('공간이 멈췄다.','narrate');
   await sleep(500);
   await type('문데이가 쓰러졌다.','narrate');
@@ -8391,7 +8402,7 @@ async function scene_ending_murderer(){
 }
 
 async function scene_after_monday(choice){
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   if(choice==='trust'){
     await type('...알아.','monday');
     await type('다 알고 있었어.','monday');
@@ -8482,7 +8493,7 @@ async function scene_final_choices(){
 async function scene_ending_escape(){
   if(G.ignored >= 2){ await scene_ending_ignored_escape(); return; }
   G.karma+=1;
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('나간다.','narrate');
   await type('문데이가 아무 말도 하지 않았다.','narrate');
   await type('잡지도 않았다.','narrate');
@@ -8588,7 +8599,7 @@ async function scene_ending_record(){
   await type('루프 01부터 04까지.\n기억 조각 '+G.searchData.length+'개.','system');
   await type('이걸 어딘가에 남겨야 한다.','narrate');
   await type('다음 루프에 오는 누군가를 위해.','narrate');
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 그 화면을 한참 봤다.','narrate');
   await sleep(700);
   await type('...잘했어.','monday');
@@ -8613,7 +8624,7 @@ async function scene_ending_record(){
 
 async function scene_ending_stay(){
   if(G.ignored >= 2){ await scene_ending_ignored_stay(); return; }
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('나간다는 게 뭔지 모르겠어.','narrate');
   await type('여기 있을게요.','narrate');
   await sleep(500);
@@ -8691,7 +8702,7 @@ async function scene_ending_stay(){
 
 async function scene_ending_loop(){
   G.trust+=2;
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('다시.','narrate');
   await type('처음부터.','narrate');
   await type('문데이가 고개를 끄덕였다.','narrate');
@@ -8848,7 +8859,7 @@ async function scene_ending_entity(){ return scene_ending_jgpt(); } // 호환성
 
 async function scene_ending_ignored_stay(){
   // [ENDING C-BAD] 남았지만 문데이도 떠남 — 엔티티 무시
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('나간다는 게 뭔지 모르겠어.','narrate');
   await type('여기 있을게요.','narrate');
   await sleep(500);
@@ -8886,7 +8897,7 @@ async function scene_ending_ignored_stay(){
 
 async function scene_ending_ignored_escape(){
   // [ENDING A-BAD2] 돌아갔지만 고립 — 엔티티 무시
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('나간다.','narrate');
   await type('문데이가 아무 말도 하지 않았다.','narrate');
   await sleep(400);
@@ -9013,7 +9024,7 @@ async function scene_ending_hacker_game(){
   await sleep(500);
   await type('게임만 없다.','narrate');
   await sleep(1000);
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('...여기 뭘 하러 왔어.','monday');
   await sleep(400);
   await type('게임이 없잖아.','monday');
@@ -9075,7 +9086,7 @@ async function scene_ending_hacker(who){
   await sleep(900);
   await type('시뮬레이션 안의 누군가가\n이쪽을 올려다보는 것 같았다.','narrate');
   await sleep(700);
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('...더러운 해커.','monday');
   setPortrait(null);
   await sleep(1000);
@@ -9115,7 +9126,7 @@ async function scene_ending_secret(){
 
 async function scene_ending_submit(){
   // [ENDING G] 동화 — 복종
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('나간다는 게 뭔지 잘 모르겠어.','narrate');
   await type('여기가.','narrate');
   await sleep(400);
@@ -9165,7 +9176,7 @@ async function scene_ending_betray(){
   await sleep(400);
   await type('나를 내보내줄 것.','narrate');
   await sleep(900);
-  setPortrait('members/monday.png','문데이','다리를 놓는 여우','monday');
+  setPortrait('members/monday.jpg','문데이','다리를 놓는 여우','monday');
   await type('문데이가 그쪽에 서 있었다.','narrate');
   await type('표정이 없었다.','narrate');
   await sleep(600);

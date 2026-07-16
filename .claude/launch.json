@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "byeolbit",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "cd '/Users/yangjihye/Documents/별빛쉘터/배포' && exec python3 -m http.server 8800"],
+      "port": 8800
+    }
+  ]
+}

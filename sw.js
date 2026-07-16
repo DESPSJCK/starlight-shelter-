@@ -1,24 +1,24 @@
-const CACHE = 'starlight-v6';
+const CACHE = 'starlight-v7';
 
 // HTML 파일은 캐시하지 않음 (항상 최신 버전)
 const HTML_FILES = [
-  '/starlight-shelter-/',
-  '/starlight-shelter-/index.html',
-  '/starlight-shelter-/members.html',
-  '/starlight-shelter-/game.html',
-  '/starlight-shelter-/jihye.html',
+  '/',
+  '/index.html',
+  '/members.html',
+  '/game.html',
+  '/jihye.html',
 ];
 
 // 이미지 등 정적 파일만 캐시
 const STATIC_ASSETS = [
-  '/starlight-shelter-/exterior.png',
-  '/starlight-shelter-/map.png',
-  '/starlight-shelter-/lobby.png',
-  '/starlight-shelter-/floor1.png',
-  '/starlight-shelter-/floor2.png',
-  '/starlight-shelter-/floor3.png',
-  '/starlight-shelter-/b1.png',
-  '/starlight-shelter-/rooftop.png',
+  '/exterior.jpg',
+  '/map.jpg',
+  '/lobby.jpg',
+  '/floor1.jpg',
+  '/floor2.jpg',
+  '/floor3.jpg',
+  '/B1.jpg',
+  '/rooftop.jpg',
 ];
 
 self.addEventListener('install', e => {

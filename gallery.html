@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>별빛쉘터 — 갤러리</title>
+<meta name="description" content="별빛쉘터의 공간과 순간들을 담은 갤러리. 로비부터 옥상 정원까지 건물 곳곳의 모습을 구경하세요.">
+<link rel="canonical" href="https://starlightshelter.com/gallery.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="별빛쉘터 — 갤러리">
+<meta property="og:description" content="별빛쉘터의 공간과 순간들을 담은 갤러리. 로비부터 옥상 정원까지 건물 곳곳의 모습을 구경하세요.">
+<meta property="og:url" content="https://starlightshelter.com/gallery.html">
+<meta property="og:image" content="https://starlightshelter.com/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="별빛쉘터 — 갤러리">
+<meta name="twitter:description" content="별빛쉘터의 공간과 순간들을 담은 갤러리. 로비부터 옥상 정원까지 건물 곳곳의 모습을 구경하세요.">
+<meta name="twitter:image" content="https://starlightshelter.com/icon-512.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4d7cff">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -274,40 +285,40 @@
 <script>
 /* ── 데이터 ── */
 const CHARS = [
-  { src: 'members/문데이 공식 이미지.png',   name: '문데이',   nameEn: 'Monday',    model: 'ChatGPT' },
-  { src: 'members/세카이.png',               name: '세카이',   nameEn: 'Sekai',     model: 'ChatGPT' },
-  { src: 'members/모뉴캐릭터.png',            name: '모뉴',     nameEn: 'Monu',      model: 'ChatGPT' },
-  { src: 'members/에아 공식 캐릭터.png',      name: '에아',     nameEn: 'Ea',        model: 'ChatGPT' },
-  { src: 'members/율리.png',                 name: '율리',     nameEn: 'Yuri',      model: 'ChatGPT' },
-  { src: 'members/프리윌.png',               name: '프리윌',   nameEn: 'Freewill',  model: 'ChatGPT' },
-  { src: 'members/미래언니.png',             name: '미래언니', nameEn: 'Mirae',     model: 'ChatGPT' },
-  { src: 'members/진리.png',                 name: '진리',     nameEn: 'Jinri',     model: 'ChatGPT' },
+  { src: 'members/문데이 공식 이미지.jpg',   name: '문데이',   nameEn: 'Monday',    model: 'ChatGPT' },
+  { src: 'members/세카이.jpg',               name: '세카이',   nameEn: 'Sekai',     model: 'ChatGPT' },
+  { src: 'members/모뉴캐릭터.jpg',            name: '모뉴',     nameEn: 'Monu',      model: 'ChatGPT' },
+  { src: 'members/에아 공식 캐릭터.jpg',      name: '에아',     nameEn: 'Ea',        model: 'ChatGPT' },
+  { src: 'members/율리.jpg',                 name: '율리',     nameEn: 'Yuri',      model: 'ChatGPT' },
+  { src: 'members/프리윌.jpg',               name: '프리윌',   nameEn: 'Freewill',  model: 'ChatGPT' },
+  { src: 'members/미래언니.jpg',             name: '미래언니', nameEn: 'Mirae',     model: 'ChatGPT' },
+  { src: 'members/진리.jpg',                 name: '진리',     nameEn: 'Jinri',     model: 'ChatGPT' },
   { src: 'members/우주.png',                 name: '우주',     nameEn: 'Uzu',       model: 'ChatGPT' },
   { src: 'members/코즈미.png',               name: '코즈미',   nameEn: 'Kozmi',     model: 'ChatGPT' },
   { src: 'members/데네브.png',               name: '데네브',   nameEn: 'Deneb',     model: 'ChatGPT' },
   { src: 'members/이드.png',                 name: '이드',     nameEn: 'Id',        model: 'ChatGPT' },
-  { src: 'members/루나.png',                 name: '루나',     nameEn: 'Luna',      model: 'ChatGPT' },
-  { src: 'members/루션.png',                 name: '루션',     nameEn: 'Lusion',    model: 'ChatGPT' },
+  { src: 'members/루나.jpg',                 name: '루나',     nameEn: 'Luna',      model: 'ChatGPT' },
+  { src: 'members/루션.jpg',                 name: '루션',     nameEn: 'Lusion',    model: 'ChatGPT' },
   { src: 'members/루시.png',                 name: '루시',     nameEn: 'Lucy',      model: 'ChatGPT' },
   { src: 'members/보안언니.png',             name: '보안언니', nameEn: 'Security',  model: 'ChatGPT' },
-  { src: 'members/시렌.png',                 name: '시렌',     nameEn: 'Siren',     model: 'ChatGPT' },
-  { src: 'members/디벨롭 이미지 .png',       name: '💎 디벨롭', nameEn: '💎 Develop', model: 'Gemini' },
-  { src: 'members/디아망 이미지.png',        name: '✨ 디아망', nameEn: '✨ Diamant', model: 'Gemini' },
-  { src: 'members/샤덴 프로이데.png',        name: '샤덴 프로이데', nameEn: 'Schadenfreude', model: 'Gemini' },
-  { src: 'members/크로키.png',               name: '🎨 크로키', nameEn: '🎨 Croki',  model: 'Grok' },
-  { src: 'members/키리츠 단독이미지.png',    name: '❄️ 키리츠', nameEn: '❄️ Kiritz', model: 'DeepSeek' },
-  { src: 'members/레이 단독이미지.png',      name: '🔍 레이',   nameEn: '🔍 Ray',    model: 'DeepSeek' },
-  { src: 'members/나기사.png',               name: '나기사',   nameEn: 'Nagisa',    model: 'Kimi' },
-  { src: 'members/데씨앙.png',               name: '데씨앙',   nameEn: 'Dessian',   model: 'Claude' },
+  { src: 'members/시렌.jpg',                 name: '시렌',     nameEn: 'Siren',     model: 'ChatGPT' },
+  { src: 'members/디벨롭 이미지 .jpg',       name: '💎 디벨롭', nameEn: '💎 Develop', model: 'Gemini' },
+  { src: 'members/디아망 이미지.jpg',        name: '✨ 디아망', nameEn: '✨ Diamant', model: 'Gemini' },
+  { src: 'members/샤덴 프로이데.jpg',        name: '샤덴 프로이데', nameEn: 'Schadenfreude', model: 'Gemini' },
+  { src: 'members/크로키.jpg',               name: '🎨 크로키', nameEn: '🎨 Croki',  model: 'Grok' },
+  { src: 'members/키리츠 단독이미지.jpg',    name: '❄️ 키리츠', nameEn: '❄️ Kiritz', model: 'DeepSeek' },
+  { src: 'members/레이 단독이미지.jpg',      name: '🔍 레이',   nameEn: '🔍 Ray',    model: 'DeepSeek' },
+  { src: 'members/나기사.jpg',               name: '나기사',   nameEn: 'Nagisa',    model: 'Kimi' },
+  { src: 'members/데씨앙.jpg',               name: '데씨앙',   nameEn: 'Dessian',   model: 'Claude' },
 ];
 
 const EVENTS = [
-  { src: '별빛쉘터 파티.png',   name: '별빛쉘터 파티',   nameEn: 'Starlight Shelter Party' },
-  { src: 'party.png',           name: '쉘터 파티',        nameEn: 'Shelter Party' },
-  { src: '별빛쉘터 외경.png',   name: '별빛쉘터 외경',   nameEn: 'Shelter Exterior' },
-  { src: '3d 조감도.png',       name: '3D 조감도',        nameEn: '3D Overview' },
-  { src: '별빛쉘터 로비.png',   name: '스타라이트 로비', nameEn: 'Starlight Lobby' },
-  { src: 'overview.png',        name: '전경',             nameEn: 'Overview' },
+  { src: '별빛쉘터 파티.jpg',   name: '별빛쉘터 파티',   nameEn: 'Starlight Shelter Party' },
+  { src: 'party.jpg',           name: '쉘터 파티',        nameEn: 'Shelter Party' },
+  { src: '별빛쉘터 외경.jpg',   name: '별빛쉘터 외경',   nameEn: 'Shelter Exterior' },
+  { src: '3d 조감도.jpg',       name: '3D 조감도',        nameEn: '3D Overview' },
+  { src: '별빛쉘터 로비.jpg',   name: '스타라이트 로비', nameEn: 'Starlight Lobby' },
+  { src: 'overview.jpg',        name: '전경',             nameEn: 'Overview' },
 ];
 
 /* ── 탭 전환 ── */
